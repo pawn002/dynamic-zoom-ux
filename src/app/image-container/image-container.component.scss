@@ -1,0 +1,16 @@
+.comp-container {
+  position: relative;
+  border: coral 1px dashed;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  box-sizing: border-box;
+
+  .img-container {
+    display: block;
+    box-sizing: border-box;
+    border: green 1px dashed;
+    width: auto;
+    height: 100%;
+  }
+}

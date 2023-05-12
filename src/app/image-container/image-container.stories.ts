@@ -2,19 +2,17 @@ import { moduleMetadata } from '@storybook/angular';
 import type { Meta, StoryObj } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
 
-import { ImageContainerComponent } from '../image-container/image-container.component';
+import { ImageContainerComponent } from './image-container.component';
 
-import { MockAppLayoutComponent } from './mock-app-layout.component';
-
-const meta: Meta<MockAppLayoutComponent> = {
-  title: 'Main/Mock App Layout',
-  component: MockAppLayoutComponent,
+const meta: Meta<ImageContainerComponent> = {
+  title: 'Main/Image Container',
+  component: ImageContainerComponent,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs
   tags: ['autodocs'],
   render: (args) => ({ props: args }),
   decorators: [
     moduleMetadata({
-      declarations: [ImageContainerComponent],
+      declarations: [],
       imports: [CommonModule],
     }),
   ],
@@ -25,8 +23,14 @@ const meta: Meta<MockAppLayoutComponent> = {
 };
 
 export default meta;
-type Story = StoryObj<MockAppLayoutComponent>;
+type Story = StoryObj<ImageContainerComponent>;
 
 export const Typical: Story = {
+  render: () => ({
+    props: {
+      src: '/logo_w3c.png',
+      alt: 'my image',
+    },
+  }),
   args: {},
 };

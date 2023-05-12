@@ -1,15 +1,23 @@
-:host{
+:host {
   border: 2px dotted red;
 
-  .comp-container{
+  .comp-container {
     border: 2px dotted black;
 
     position: absolute;
+    box-sizing: border-box;
+    width: 100%;
 
     padding: 1rem;
 
+    .image-section {
+      border: black 1px solid;
+      display: flex;
+      justify-content: center;
+
+      height: 320px;
+      width: 100%;
+      overflow: auto;
+    }
+  }
 }
-
-}
-
-

@@ -269,8 +269,48 @@
             "stylesData": ""
         },
         {
+            "name": "ImageContainerComponent",
+            "id": "component-ImageContainerComponent-4cb4e5628bfad4e1b1b1552aaa9363bd7af08fa2d0230b09e474f740ec6e0605a7426abb02348f37fcc670905e7ac78263734e0b77d40c06a58dae9b5c4c1335",
+            "file": "src/app/image-container/image-container.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-image-container",
+            "styleUrls": [
+                "./image-container.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./image-container.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-image-container',\n  templateUrl: './image-container.component.html',\n  styleUrls: ['./image-container.component.scss']\n})\nexport class ImageContainerComponent {\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./image-container.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div style=\"width: 100%; height: 100%; overflow: auto\">\n  <img src=\"/logo_w3c.png\" style=\"width: 100%; height: auto\" />\n</div>\n"
+        },
+        {
             "name": "MockAppLayoutComponent",
-            "id": "component-MockAppLayoutComponent-9ba4e0806b7b81bedf27ab45cca3118b8ea69eaa77e9325d0417904f68cdaef73c1ff2bb048aaa5a74013a2e34f2431f26cf472117a5f7a528c411e57316fb5e",
+            "id": "component-MockAppLayoutComponent-7c65340980dfae07866f91ee18e221d7a986bc5b8400fe3b7bcfe1bb38030c346d84e5e326444c147b03cd25180283a3d9ad5fc9fd88bb8061a33644abe080e7",
             "file": "src/app/mock-app-layout/mock-app-layout.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -288,7 +328,35 @@
             "viewProviders": [],
             "inputsClass": [],
             "outputsClass": [],
-            "propertiesClass": [],
+            "propertiesClass": [
+                {
+                    "name": "anIpsum",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 12
+                },
+                {
+                    "name": "anotherIpsum",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                },
+                {
+                    "name": "baseIpsum",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "LoremIpsum",
+                    "optional": false,
+                    "description": "",
+                    "line": 11
+                }
+            ],
             "methodsClass": [],
             "deprecated": false,
             "deprecationMessage": "",
@@ -297,16 +365,24 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-mock-app-layout',\n  templateUrl: './mock-app-layout.component.html',\n  styleUrls: ['./mock-app-layout.component.scss']\n})\nexport class MockAppLayoutComponent {\n\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\nimport { LoremIpsum } from 'lorem-ipsum';\r\n\r\n@Component({\r\n  selector: 'app-mock-app-layout',\r\n  templateUrl: './mock-app-layout.component.html',\r\n  styleUrls: ['./mock-app-layout.component.scss'],\r\n})\r\nexport class MockAppLayoutComponent {\r\n  baseIpsum: LoremIpsum;\r\n  anIpsum;\r\n  anotherIpsum;\r\n\r\n  constructor() {\r\n    this.baseIpsum = new LoremIpsum({\r\n      sentencesPerParagraph: {\r\n        max: 8,\r\n        min: 4,\r\n      },\r\n      wordsPerSentence: {\r\n        max: 16,\r\n        min: 4,\r\n      },\r\n    });\r\n\r\n    this.anIpsum = this.baseIpsum.generateParagraphs(1);\r\n\r\n    this.anotherIpsum = this.baseIpsum.generateParagraphs(1);\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ":host{\r\n  border: 2px dotted red;\r\n\r\n  .comp-container{\r\n    border: 2px dotted black;\r\n\r\n}\r\n\r\n}\r\n\r\n\r\n",
+                    "data": ":host{\r\n  border: 2px dotted red;\r\n\r\n  .comp-container{\r\n    border: 2px dotted black;\r\n\r\n    position: absolute;\r\n\r\n    padding: 1rem;\r\n\r\n}\r\n\r\n}\r\n\r\n\r\n",
                     "styleUrl": "./mock-app-layout.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": "<div class=\"comp-container\">\n  <p>mock-app-layout works!</p>\n</div>\n"
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 13
+            },
+            "templateData": "<div class=\"comp-container\">\r\n  <p [innerText]=\"anIpsum\"></p>\r\n\r\n  <p [innerText]=\"anotherIpsum\"></p>\r\n</div>\r\n"
         },
         {
             "name": "PageComponent",
@@ -392,13 +468,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-1f155f08ed4500db51820498da01731ac5985083129d74273ec54153a29fca97c58d3a698f75a7683464d9406a9c1b31eb149e9db452136120f48e616a5e1744",
+            "id": "module-AppModule-4be435a5d6faa7e58c78fc4d4991076b3acde1976fe8e7933cec38a7fbd3e1839af820333dd9c5e2c694cd1bf00df25eb8882acac1ef85c4912d241ee79cf362",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { MockAppLayoutComponent } from './mock-app-layout/mock-app-layout.component';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    MockAppLayoutComponent\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { MockAppLayoutComponent } from './mock-app-layout/mock-app-layout.component';\nimport { ImageContainerComponent } from './image-container/image-container.component';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    MockAppLayoutComponent,\r\n    ImageContainerComponent\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -409,6 +485,9 @@
                     "elements": [
                         {
                             "name": "AppComponent"
+                        },
+                        {
+                            "name": "ImageContainerComponent"
                         },
                         {
                             "name": "MockAppLayoutComponent"
@@ -564,6 +643,16 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/app/image-container/image-container.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<ImageContainerComponent>",
+                "defaultValue": "{\r\n  title: 'Main/Image Container',\r\n  component: ImageContainerComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [CommonModule],\r\n    }),\r\n  ],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/app/mock-app-layout/mock-app-layout.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -614,6 +703,16 @@
                 "name": "Typical",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/app/image-container/image-container.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  render: () => ({\r\n    props: {\r\n      src: '/logo_w3c.png',\r\n      alt: 'my image',\r\n    },\r\n  }),\r\n  args: {},\r\n}"
+            },
+            {
+                "name": "Typical",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/app/mock-app-layout/mock-app-layout.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -651,6 +750,17 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<Page>",
                 "file": "src/stories/Page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 177
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<ImageContainerComponent>",
+                "file": "src/app/image-container/image-container.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -786,6 +896,28 @@
                     "defaultValue": "{\r\n  title: 'Example/Page',\r\n  component: Page,\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [Button, Header],\r\n      imports: [CommonModule],\r\n    }),\r\n  ],\r\n}"
                 }
             ],
+            "src/app/image-container/image-container.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/image-container/image-container.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<ImageContainerComponent>",
+                    "defaultValue": "{\r\n  title: 'Main/Image Container',\r\n  component: ImageContainerComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [CommonModule],\r\n    }),\r\n  ],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
+                },
+                {
+                    "name": "Typical",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/image-container/image-container.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  render: () => ({\r\n    props: {\r\n      src: '/logo_w3c.png',\r\n      alt: 'my image',\r\n    },\r\n  }),\r\n  args: {},\r\n}"
+                }
+            ],
             "src/app/mock-app-layout/mock-app-layout.stories.ts": [
                 {
                     "name": "meta",
@@ -863,6 +995,19 @@
                     "kind": 177
                 }
             ],
+            "src/app/image-container/image-container.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ImageContainerComponent>",
+                    "file": "src/app/image-container/image-container.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 177
+                }
+            ],
             "src/app/mock-app-layout/mock-app-layout.stories.ts": [
                 {
                     "name": "Story",
@@ -893,7 +1038,7 @@
         ]
     },
     "coverage": {
-        "count": 4,
+        "count": 3,
         "status": "low",
         "files": [
             {
@@ -916,12 +1061,41 @@
                 "status": "low"
             },
             {
+                "filePath": "src/app/image-container/image-container.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ImageContainerComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/image-container/image-container.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/image-container/image-container.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Typical",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/app/mock-app-layout/mock-app-layout.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "MockAppLayoutComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/1",
+                "coverageCount": "0/5",
                 "status": "low"
             },
             {
