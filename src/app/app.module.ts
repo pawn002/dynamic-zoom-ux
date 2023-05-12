@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MockAppLayoutComponent } from './mock-app-layout/mock-app-layout.component';
+import { ImageContainerComponent } from './image-container/image-container.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MockAppLayoutComponent
+    MockAppLayoutComponent,
+    ImageContainerComponent
   ],
   imports: [
     BrowserModule,
