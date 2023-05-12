@@ -1,9 +1,10 @@
 :host{
   border: 2px dotted red;
-  margin: 0;
 
   .comp-container{
     border: 2px dotted black;
+
+    position: absolute;
 
     padding: 1rem;
 
