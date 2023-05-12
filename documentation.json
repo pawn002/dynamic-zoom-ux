@@ -270,7 +270,7 @@
         },
         {
             "name": "ImageContainerComponent",
-            "id": "component-ImageContainerComponent-4cb4e5628bfad4e1b1b1552aaa9363bd7af08fa2d0230b09e474f740ec6e0605a7426abb02348f37fcc670905e7ac78263734e0b77d40c06a58dae9b5c4c1335",
+            "id": "component-ImageContainerComponent-4f5750b477b06e04e88a67e1cb5181f3e09020a962f0aa567ae7f5cbdd2fadd1c24b51442059ac5ee04f72c60df1a817e29a8fade38cb5f086c95d35b9ba299d",
             "file": "src/app/image-container/image-container.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -297,16 +297,16 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-image-container',\n  templateUrl: './image-container.component.html',\n  styleUrls: ['./image-container.component.scss']\n})\nexport class ImageContainerComponent {\n\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-image-container',\r\n  templateUrl: './image-container.component.html',\r\n  styleUrls: ['./image-container.component.scss']\r\n})\r\nexport class ImageContainerComponent {\r\n\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
+                    "data": ".comp-container {\r\n  position: relative;\r\n  border: coral 1px dashed;\r\n  width: 100%;\r\n  height: 100%;\r\n  overflow: auto;\r\n  box-sizing: border-box;\r\n\r\n  .img-container {\r\n    display: block;\r\n    box-sizing: border-box;\r\n    border: green 1px dashed;\r\n    width: auto;\r\n    height: 100%;\r\n  }\r\n}\r\n",
                     "styleUrl": "./image-container.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": "<div style=\"width: 100%; height: 100%; overflow: auto\">\n  <img src=\"/logo_w3c.png\" style=\"width: 100%; height: auto\" />\n</div>\n"
+            "templateData": "<div class=\"comp-container\">\r\n  <img class=\"img-container\" src=\"/logo_w3c.png\" />\r\n</div>\r\n"
         },
         {
             "name": "MockAppLayoutComponent",
@@ -369,7 +369,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ":host{\r\n  border: 2px dotted red;\r\n\r\n  .comp-container{\r\n    border: 2px dotted black;\r\n\r\n    position: absolute;\r\n\r\n    padding: 1rem;\r\n\r\n}\r\n\r\n}\r\n\r\n\r\n",
+                    "data": ":host {\r\n  border: 2px dotted red;\r\n\r\n  .comp-container {\r\n    border: 2px dotted black;\r\n\r\n    position: absolute;\r\n    box-sizing: border-box;\r\n    width: 100%;\r\n\r\n    padding: 1rem;\r\n\r\n    .image-section {\r\n      position: relative;\r\n      left: 50%;\r\n      transform: translateX(-50%);\r\n      border: black 1px solid;\r\n\r\n      height: 320px;\r\n      width: fit-content;\r\n      max-width: 100%;\r\n    }\r\n  }\r\n}\r\n",
                     "styleUrl": "./mock-app-layout.component.scss"
                 }
             ],
@@ -382,7 +382,7 @@
                 "args": [],
                 "line": 13
             },
-            "templateData": "<div class=\"comp-container\">\r\n  <p [innerText]=\"anIpsum\"></p>\r\n\r\n  <p [innerText]=\"anotherIpsum\"></p>\r\n</div>\r\n"
+            "templateData": "<div class=\"comp-container\">\r\n  <h1>Better User Experience for Browser Zoom Users</h1>\r\n\r\n  <p>\r\n    <em>\r\n      <strong>\r\n        In general, the thing to avoid the most is tedium caused by too many\r\n        nested scroll bars\r\n      </strong>\r\n    </em>\r\n  </p>\r\n\r\n  <ul>\r\n    <li>\r\n      For predominantly vertical layouts, there should be only one vertical\r\n      scroll bar\r\n    </li>\r\n    <li>\r\n      For predominantly horizontal layouts (rare), there should be only one\r\n      horizontal scroll bar\r\n    </li>\r\n  </ul>\r\n\r\n  <p>\r\n    <strong>\r\n      For most text, the expectation is that text gets bigger and flows.\r\n    </strong>\r\n  </p>\r\n\r\n  <p [innerText]=\"anIpsum\"></p>\r\n\r\n  <p>\r\n    <strong>\r\n      For most content images, the expectation is that they get bigger,\r\n      presenting a horizontal scroll bar if two dimensions are necessary for the\r\n      images value to the user. e.g. maps, some graphics, etc.\r\n    </strong>\r\n  </p>\r\n\r\n  <div class=\"image-section\">\r\n    <app-image-container></app-image-container>\r\n  </div>\r\n\r\n  <p [innerText]=\"anotherIpsum\"></p>\r\n</div>\r\n"
         },
         {
             "name": "PageComponent",
@@ -468,13 +468,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-4be435a5d6faa7e58c78fc4d4991076b3acde1976fe8e7933cec38a7fbd3e1839af820333dd9c5e2c694cd1bf00df25eb8882acac1ef85c4912d241ee79cf362",
+            "id": "module-AppModule-d5a9368c0b32eb3be78513d356e6685c8fccc3f79db570a1ac5038aef6574030cf0f4717935543e2385cd25221318738a9d608d66aa003c6c804801cc87508e8",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { MockAppLayoutComponent } from './mock-app-layout/mock-app-layout.component';\nimport { ImageContainerComponent } from './image-container/image-container.component';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    MockAppLayoutComponent,\r\n    ImageContainerComponent\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { MockAppLayoutComponent } from './mock-app-layout/mock-app-layout.component';\r\nimport { ImageContainerComponent } from './image-container/image-container.component';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    MockAppLayoutComponent,\r\n    ImageContainerComponent\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -657,7 +657,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<MockAppLayoutComponent>",
-                "defaultValue": "{\r\n  title: 'Main/Mock App Layout',\r\n  component: MockAppLayoutComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [CommonModule],\r\n    }),\r\n  ],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  title: 'Main/Mock App Layout',\r\n  component: MockAppLayoutComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [ImageContainerComponent],\r\n      imports: [CommonModule],\r\n    }),\r\n  ],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
             },
             {
                 "name": "preview",
@@ -927,7 +927,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<MockAppLayoutComponent>",
-                    "defaultValue": "{\r\n  title: 'Main/Mock App Layout',\r\n  component: MockAppLayoutComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [CommonModule],\r\n    }),\r\n  ],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  title: 'Main/Mock App Layout',\r\n  component: MockAppLayoutComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [ImageContainerComponent],\r\n      imports: [CommonModule],\r\n    }),\r\n  ],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
                 },
                 {
                     "name": "Typical",

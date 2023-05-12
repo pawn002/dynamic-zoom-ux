@@ -11,13 +11,14 @@
     padding: 1rem;
 
     .image-section {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
       border: black 1px solid;
-      display: flex;
-      justify-content: center;
 
       height: 320px;
-      width: 100%;
-      overflow: auto;
+      width: fit-content;
+      max-width: 100%;
     }
   }
 }

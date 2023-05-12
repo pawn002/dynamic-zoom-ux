@@ -1,5 +1,41 @@
 <div class="comp-container">
+  <h1>Better User Experience for Browser Zoom Users</h1>
+
+  <p>
+    <em>
+      <strong>
+        In general, the thing to avoid the most is tedium caused by too many
+        nested scroll bars
+      </strong>
+    </em>
+  </p>
+
+  <ul>
+    <li>
+      For predominantly vertical layouts, there should be only one vertical
+      scroll bar
+    </li>
+    <li>
+      For predominantly horizontal layouts (rare), there should be only one
+      horizontal scroll bar
+    </li>
+  </ul>
+
+  <p>
+    <strong>
+      For most text, the expectation is that text gets bigger and flows.
+    </strong>
+  </p>
+
   <p [innerText]="anIpsum"></p>
+
+  <p>
+    <strong>
+      For most content images, the expectation is that they get bigger,
+      presenting a horizontal scroll bar if two dimensions are necessary for the
+      images value to the user. e.g. maps, some graphics, etc.
+    </strong>
+  </p>
 
   <div class="image-section">
     <app-image-container></app-image-container>

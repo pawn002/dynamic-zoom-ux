@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+
+$primaryFont: Georgia;
+$secondaryFont: Calibri;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+th {
+  font-family: $primaryFont;
+}
+
+p,
+li,
+td {
+  font-family: $secondaryFont;
+}
