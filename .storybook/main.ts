@@ -6,7 +6,7 @@ const config: StorybookConfig = {
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
   ],
-  staticDirs: ['../src/assets'],
+  staticDirs: ['../src'],
   framework: {
     name: '@storybook/angular',
     options: {},
