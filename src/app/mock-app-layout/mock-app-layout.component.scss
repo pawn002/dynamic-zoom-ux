@@ -1,24 +1,9 @@
 :host {
-  border: 2px dotted red;
-
   .comp-container {
-    border: 2px dotted black;
-
-    position: absolute;
     box-sizing: border-box;
+
+    border: 2px dotted black;
     width: 100%;
-
     padding: 1rem;
-
-    .image-section {
-      position: relative;
-      left: 50%;
-      transform: translateX(-50%);
-      border: black 1px solid;
-
-      height: 320px;
-      width: fit-content;
-      max-width: 100%;
-    }
   }
 }

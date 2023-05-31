@@ -3,6 +3,10 @@
 $primaryFont: Georgia;
 $secondaryFont: Calibri;
 
+body {
+  margin: 0;
+}
+
 h1,
 h2,
 h3,
@@ -16,4 +20,15 @@ p,
 li,
 td {
   font-family: $secondaryFont;
+}
+
+.image-section {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+  border: black 1px solid;
+  height: 240px;
+  width: fit-content;
+  max-width: 100%;
 }
