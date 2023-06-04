@@ -1,0 +1,9 @@
+.comp-container {
+  padding: 2rem 4rem;
+}
+
+@media only screen and (max-width: 320px) {
+  .comp-container {
+    padding: 0.5rem 1rem;
+  }
+}
