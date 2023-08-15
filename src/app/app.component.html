@@ -9,10 +9,6 @@
     container.
   </p>
 
-  <div class="image-section">
-    <app-image-container></app-image-container>
-  </div>
-
   <h3>Keyboard Users who zoom</h3>
 
   <p>
@@ -29,7 +25,11 @@
   </ul>
 
   <div class="image-section">
-    <app-image-container></app-image-container>
+    <app-image-container
+      [altText]="
+        'W3C logo consisting of an uppercase W and the number 3 joined where the w ends and the three begins.'
+      "
+    ></app-image-container>
   </div>
 
   <h3>Users who are blind</h3>

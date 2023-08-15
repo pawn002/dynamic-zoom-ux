@@ -1,8 +1,6 @@
 .comp-container {
-  border: oklch(87.32% 0.187 188.47) 3px solid;
-  box-sizing: border-box;
+  transition: all 300ms;
   padding: 2rem 4rem;
-  width: fit-content;
 }
 
 @media only screen and (max-width: 375px) {
