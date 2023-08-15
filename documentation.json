@@ -22,7 +22,7 @@
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-adbca1b5dd8b521a0bbe1fcc4bf732889aab9eaf3030fa2dcd9239eaf21eb4d188166303ecfd9f07edf5cfcbf4a6905764d1c4f45582a14696acca5358b81179",
+            "id": "component-AppComponent-4615e13ab3746a5c194993cecce489f9eb936bd17df435bc896d8c4e28f4e12b423bf17830e2331984f09d2bb115dc287e02b247b83a1f1c59207da5c42f9069",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -60,16 +60,16 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss']\n})\nexport class AppComponent {\n  title = 'dynamic-zoom-ux';\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent {\r\n  title = 'dynamic-zoom-ux';\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
+                    "data": ".comp-container {\r\n  border: oklch(87.32% 0.187 188.47) 3px solid;\r\n  box-sizing: border-box;\r\n  padding: 2rem 4rem;\r\n  width: fit-content;\r\n}\r\n\r\n@media only screen and (max-width: 375px) {\r\n  .comp-container {\r\n    padding: 0.5rem 1rem;\r\n  }\r\n}\r\n",
                     "styleUrl": "./app.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": "<h1>Dynamic Zoom and Layout Impacts</h1>\n\n<h2>Content Visuals</h2>\n\n<p>\n  Non-decorative Visuals (i.e. Content Visuals) that have an essential second\n  dimension to be valuable, can have an additional scroll bar specific to its\n  container.\n</p>\n\n<div class=\"image-section\">\n  <app-image-container></app-image-container>\n</div>\n"
+            "templateData": "<div class=\"comp-container\">\r\n  <h1>Dynamic Zoom and Layout Impacts</h1>\r\n\r\n  <h2>Content Visuals</h2>\r\n\r\n  <p>\r\n    Non-decorative Visuals (i.e. Content Visuals) that have an essential second\r\n    dimension to be valuable, can have an additional scroll bar specific to its\r\n    container.\r\n  </p>\r\n\r\n  <div class=\"image-section\">\r\n    <app-image-container></app-image-container>\r\n  </div>\r\n\r\n  <h3>Keyboard Users who zoom</h3>\r\n\r\n  <p>\r\n    Keyboard users need access to the scroll bar the content visuals generate on\r\n    zoom such that. . .\r\n  </p>\r\n\r\n  <ul>\r\n    <li>they can scroll using the keyboard</li>\r\n    <li>\r\n      they do not get lost as they move from the scrolling content to non\r\n      scrolling content.\r\n    </li>\r\n  </ul>\r\n\r\n  <div class=\"image-section\">\r\n    <app-image-container></app-image-container>\r\n  </div>\r\n\r\n  <h3>Users who are blind</h3>\r\n\r\n  <p>\r\n    A screen reader user will be informed that a Content Visual exists in the\r\n    layout along with its associated alt-text.\r\n  </p>\r\n\r\n  <p>\r\n    However it is unclear, how adding a <code>tabindex</code> for the Content\r\n    Visual (because of the keyboard user who zooms) 'works' for a screen reader\r\n    users.\r\n  </p>\r\n\r\n  <h4>Keep the User informed</h4>\r\n\r\n  <p>\r\n    Consistent with usability for users who are not blind,\r\n    <em\r\n      >keeping the user informed throughout an experience is integral to a good\r\n      UX.</em\r\n    >\r\n    With this in mind. . .\r\n  </p>\r\n\r\n  <ul>\r\n    <li>\r\n      Mirror the experience of other interactive semantic elements like\r\n      <code>a</code> (links), or <code>button</code> elements.\r\n    </li>\r\n    <li>\r\n      Do not implement ARIA attributes that are inconsistent with the roles that\r\n      a\r\n      <code>img</code> element typically has.\r\n    </li>\r\n    <li>Test your implementation with an actual user who is blind.</li>\r\n  </ul>\r\n</div>\r\n"
         },
         {
             "name": "ButtonComponent",
@@ -306,7 +306,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<div class=\"comp-container\">\r\n  <img class=\"img-container\" src=\"assets/logo_w3c.png\" />\r\n</div>\r\n"
+            "templateData": "<!-- The parent container to the 2d asset needs to be focusable to IOT use the scrollbar? -->\r\n<div class=\"comp-container\" tabindex=\"0\">\r\n  <img\r\n    class=\"img-container\"\r\n    src=\"assets/logo_w3c.png\"\r\n    alt=\"W3C logo consisting of letter W and number 3.\"\r\n  />\r\n</div>\r\n"
         },
         {
             "name": "MockAppLayoutComponent",
@@ -522,13 +522,13 @@
         },
         {
             "name": "AppRoutingModule",
-            "id": "module-AppRoutingModule-78922b3ae99d2c5249b333980bd5afde1b120b2cc6fedfd41b8b2cc90f279797cb4b22e183bf7e1d1dfab8c6100e77e7812c110234d81f866f544f28a3e18b15",
+            "id": "module-AppRoutingModule-4518c33195180c88b148f5ad346bbd509e37db201ff0191c9bd5d00989bc674a7e8476b2298b5f61b74b4fa3379b6d71a3615e2cc472074cf6e416b23941131b",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app-routing.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\n\nconst routes: Routes = [];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nconst routes: Routes = [];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule { }\r\n",
             "children": [
                 {
                     "type": "providers",

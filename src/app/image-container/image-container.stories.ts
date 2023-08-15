@@ -26,11 +26,17 @@ export default meta;
 type Story = StoryObj<ImageContainerComponent>;
 
 export const Typical: Story = {
-  render: () => ({
-    props: {
-      src: '/logo_w3c.png',
-      alt: 'my image',
-    },
-  }),
   args: {},
+};
+
+export const Decorative: Story = {
+  args: {
+    altText: '',
+  },
+};
+
+export const Contentful: Story = {
+  args: {
+    altText: 'W3C logo composed of a W.',
+  },
 };
